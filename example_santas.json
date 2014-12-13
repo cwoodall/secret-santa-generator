@@ -1,0 +1,39 @@
+{
+    "sendgrid_info": {
+        "uname": "SENDGRID_USERNAME",
+        "pwd": "SENDGRID_PASSWORD"
+    },
+    "from_address": "My Name <myname@email.com>",
+    "santas": [
+        {
+            "name": "Name 1",
+            "email": "email1@email.com"
+        },
+        {
+            "name": "Name 2",
+            "email": "email2@email.com"
+        },
+        {
+            "name": "Name 3",
+            "email": "email3@email.com"
+        },
+        {
+            "name": "Name 4",
+            "email": "email4@email.com"
+        },
+        {
+            "name": "Name 5",
+            "email": "email5@email.com"
+        },
+        {
+            "name": "Name 6",
+            "email": "email6@email.com"
+        },
+        {
+            "name": "Name 7",
+            "email": "email7@email.com"
+        }
+    ],
+    "subject": "Example",
+    "message": "<p>Hello {0},</p><p>You are the secret santa of <b>{1}</b></p>"
+}
