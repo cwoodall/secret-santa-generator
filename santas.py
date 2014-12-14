@@ -11,7 +11,7 @@ def pairwise(iterable):
     return izip(a, b)
 
 if len(sys.argv[1:]) != 1:
-    print("Wrong number of arguments, please call as ./santas.py santa_file.json")
+    print("Error: Wrong number of arguments, please call as ./santas.py santa_file.json")
     sys.exit(0)
 
 file_name = sys.argv[1]
@@ -22,7 +22,7 @@ with open(file_name) as santa_file:
         santas_json = json.loads(santa_file.read())
     except:
         print("Error: Invalid data santas!")
-
+        sys.exit(0)
 
 sg_login = santas_json["sendgrid_info"]
 santas = santas_json["santas"]
