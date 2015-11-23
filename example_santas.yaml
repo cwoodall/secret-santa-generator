@@ -1,0 +1,14 @@
+sendgrid_info:
+  uname: user name
+  pwd: SENDGRID_PASSWORD
+
+santas:
+  - name: Name 1
+    email: email1@email.com
+  - name: Name 2
+    email: email@email.com
+
+letter_form:
+  from_address: My Name <myname@email.com>
+  subject: Example,
+  message: <p>Hello {0},</p><p>You are the secret santa of <b>{1}</b></p>
