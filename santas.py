@@ -1,4 +1,4 @@
-import json
+import yaml
 import random
 from itertools import tee, izip
 import sendgrid
@@ -11,24 +11,25 @@ def pairwise(iterable):
     return izip(a, b)
 
 if len(sys.argv[1:]) != 1:
-    print("Error: Wrong number of arguments, please call as ./santas.py santa_file.json")
+    print("Error: Wrong number of arguments, please call as ./santas.py santa_file.yaml")
     sys.exit(0)
 
 file_name = sys.argv[1]
 data = []
-santas_json = {}
+santas_yaml = {}
 with open(file_name) as santa_file:
     try:
-        santas_json = json.loads(santa_file.read())
+        santas_yaml = yaml.load(santa_file.read())
     except:
         print("Error: Invalid data santas!")
         sys.exit(0)
 
-sg_login = santas_json["sendgrid_info"]
-santas = santas_json["santas"]
-message = santas_json["message"]
-from_addr = santas_json["from_address"]
-subject = santas_json["subject"]
+sg_login = santas_yaml["sendgrid_info"]
+santas = santas_yaml["santas"]
+form = santas_yaml["letter_form"]
+from_addr = form["from_address"]
+subject = form["subject"]
+message = form["message"]
 
 sg = sendgrid.SendGridClient(sg_login["uname"], sg_login["pwd"])
 

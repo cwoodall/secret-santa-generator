@@ -1,14 +1,18 @@
 sendgrid_info:
-  uname: user name
-  pwd: SENDGRID_PASSWORD
+  uname: UNAME
+  pwd: PWD
 
 santas:
-  - name: Name 1
-    email: email1@email.com
-  - name: Name 2
-    email: email@email.com
+  - name: Santa 1
+    email: wow@such.com
+  - name: Foo Bar Santa
+    email: foo@bar.com
 
 letter_form:
   from_address: My Name <myname@email.com>
-  subject: Example,
-  message: <p>Hello {0},</p><p>You are the secret santa of <b>{1}</b></p>
+  subject: Santa Is So Secret
+  message: |
+    <p>Hello {0},</p>
+    <p>You are the secret santa of <b>{1}</b></p>
+    <p>From,</p>
+    <p>A Python Script That Generates These Emails</p>
