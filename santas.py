@@ -39,7 +39,7 @@ random.shuffle(santas)
 # The santa list is circular. For 3 santas
 # 0 -> 1
 # 1 -> 2
-# 2 -> 3
+# 2 -> 0
 santas.append(santas[0])
 santa_pairs = []
 for santa, santaee in pairwise(santas):
